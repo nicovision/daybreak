@@ -25,21 +25,21 @@ Categories are a fixed single choice, not a custom multi-label system. There are
 - Guest sessions depend on browser storage. Account conversion would provide recovery across browsers.
 - Anonymous sign-in rate limiting and bot protection should be reviewed before sharing a widely accessible demo. Supabase supports CAPTCHA; a complete CAPTCHA flow is not included.
 - The app uses Google Fonts with system fallbacks. Bundled fonts could remove the external font dependency.
-- Additional priorities are live RLS verification, deployment smoke tests, a formal accessibility audit, and interview walkthrough preparation.
+- The live RLS check and hosted smoke tests passed. Further work could include a formal accessibility audit and automated end-to-end browser tests.
 
 ## Verification status
 
-Automated local tests and a TypeScript/production build are included. Local browser checks cover creation, reload persistence, editing/status changes, search, and dragging. The local app is connected to Supabase. The live integration check passed on November 10, 2026: guest creation, persisted owner updates, cross-user read/update/delete isolation, ownership spoofing prevention, and unauthenticated access restrictions. Its test tasks were cleaned up; two test guest auth records remain. No hosting URL or GitHub remote exists yet.
+Automated local tests and a TypeScript/production build are included. Local browser checks cover creation, reload persistence, editing/status changes, search, and dragging. The local app is connected to Supabase. The live integration check passed on November 10, 2026: guest creation, persisted owner updates, cross-user read/update/delete isolation, ownership spoofing prevention, and unauthenticated access restrictions. Its test tasks were cleaned up; two test guest auth records remain. The source is hosted in nicovision/daybreak on GitHub, and the frontend is deployed to Cloudflare Pages. The hosted app passed guest sign-in, task creation, drag-and-drop, reload persistence, search, and phone-layout checks on November 10, 2026.
 
 ## Remaining setup
 
 1. Completed: connected Supabase project with anonymous sign-in.
 2. Completed: verified the supplied schema through live task operations and configured the local environment.
 3. Completed: ran the live guest isolation and persistence check. Recheck the hosted app in separate browsers after deployment.
-4. Create a GitHub repository and push the source without environment files or the assessment PDF.
-5. Deploy using a free hosting account with both environment values configured.
-6. Smoke-test guest creation, drag persistence, error states, and mobile use on the hosted URL.
-7. Prepare the final PDF/DOCX with your name, overview, live URL, repository URL, full SQL schema, setup instructions, extras, and tradeoffs.
+4. Completed: pushed source to nicovision/daybreak with environment files and the assessment PDF excluded.
+5. Completed: deployed to Cloudflare Pages with the public Supabase connection values configured.
+6. Completed: checked hosted guest creation, drag persistence, search, and phone layout. Save-error handling is covered by automated local tests.
+7. Completed: prepared the submission PDF and editable DOCX separately from this repository. Add the full name and rename the file before submitting.
 8. Review the implementation and any separate employer rules on assistance, then submit through the requested Drive/Form flow.
 
 Do not include the assessment PDF in the source repository. Do not publicly promote the submission link. This file is development documentation, not a completed submission document.

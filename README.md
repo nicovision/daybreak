@@ -1,5 +1,7 @@
 # Daybreak
 
+The application is deployed on Cloudflare Pages. The live link is included in the assessment submission document.
+
 A calm, responsive Kanban workspace built with React, TypeScript, Vite, dnd-kit, and Supabase. It includes four board columns, guest authentication, task creation/editing/deletion, drag-and-drop status changes, title/description search, priority/category filters, due dates, overdue indicators, sorting, and board statistics.
 
 ## Run locally
@@ -43,7 +45,7 @@ npm run build
 npm run preview
 ```
 
-The tests cover validation, immutable field stripping, combined filters, overdue logic, demo persistence, storage failures, task creation/editing/deletion, and visible save errors. The production build runs TypeScript checks.
+All 15 automated tests pass. The tests cover validation, immutable field stripping, combined filters, overdue logic, demo persistence, storage failures, task creation/editing/deletion, and visible save errors. The production build runs TypeScript checks.
 
 After connecting a dedicated assessment Supabase project, run:
 
